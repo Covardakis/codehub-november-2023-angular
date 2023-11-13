@@ -1,0 +1,22 @@
+<!-- 'Create New' button, leading to the bug submission form page-->
+<button [routerLink]="['/create-new-bug']">Create New</button>
+<hr>
+<!-- Table of all available bugs in the "database", with clickable headers for sorting purposes -->
+<table>
+  <tr>
+    <th (click)="sortByTitle()">Title</th>
+    <th (click)="sortByPriority()">Priority</th>
+    <th (click)="sortByReporter()">Reporter</th>
+    <th (click)="sortByDateCreated()">Date Created</th>
+    <th (click)="sortByStatus()">Status</th>
+  </tr>
+  <ng-container *ngFor="let bug of bugs">
+    <tr>
+      <td>{{bug.title}}</td>
+      <td>{{bug.priority}}</td>
+      <td>{{bug.reporter}}</td>
+      <td>{{bug.created | date: 'yyyy/MM/dd'}}</td>
+      <td>{{bug.status}}</td>
+    </tr>
+  </ng-container>
+</table>

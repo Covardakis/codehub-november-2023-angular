@@ -1,0 +1,65 @@
+<!-- Form Group -->
+<form (ngSubmit)='submitNewBug()' [formGroup]="newBugForm" class="form">
+  <div>
+    <label>Title*</label>
+    <br>
+    <input formControlName="title" type="text" class="form-control">
+    <br>
+    <div class="alert alert-danger" *ngIf="title?.hasError('required') && title?.touched">Title is required</div>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Description*</label>
+    <br>
+    <input formControlName="description" type="text" class="form-control description-field">
+    <br>
+    <div class="alert alert-danger" *ngIf="description?.hasError('required') && description?.touched">Description is
+      required</div>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Priority*</label>
+    <br>
+    <select formControlName="priority" class="dropdown-menu">
+      <option *ngFor="let priority of priorities" [ngValue]="priority">
+        {{priority.name}}
+      </option>
+    </select>
+    <div class="alert alert-danger" *ngIf="priority?.hasError('required')">Priority is required</div>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Reporter*</label>
+    <br>
+    <select formControlName="reporter" class="dropdown-menu">
+      <option *ngFor="let reporter of reporters" [ngValue]="reporter">
+        {{reporter}}
+      </option>
+    </select>
+    <div class="alert alert-danger" *ngIf="reporter?.hasError('required')">Reporter is required</div>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Status</label>
+    <br>
+    <select formControlName="status" class="dropdown-menu">
+      <option *ngFor="let status of statuses" [ngValue]="status">
+        {{status}}
+      </option>
+    </select>
+    <div class="alert alert-danger" *ngIf="status?.hasError('required')">Status is required when reporter is QA</div>
+  </div>
+
+  <br>
+
+  <br><br>
+  <button class="btn btn-primary" [disabled]="newBugForm.invalid">Submit</button>
+</form>

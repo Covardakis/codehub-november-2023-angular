@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    text-align: center;
+}
+
+.form-control {
+    width: 200px;
+}
+
+.description-field {
+    height: 100px;
+}
+
+.dropdown-menu {
+    width: 200px;
+}
