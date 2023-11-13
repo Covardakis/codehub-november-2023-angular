@@ -1,8 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, RequiredValidator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BugService } from 'src/app/services/bug.service';
-import { BugComponent } from '../bug/bug.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -61,15 +60,9 @@ export class CreateNewFormComponent implements OnInit {
 
   // 'submitNewBug()' function
   submitNewBug() {
-    // Create a new Bug, suing the current form values
-    const newBug = new BugComponent();
-    newBug.setTitle(this.newBugForm.get('title')?.value);
-    newBug.setDescription(this.newBugForm.get('description')?.value);
-    newBug.setPriority(this.newBugForm.get('priority')?.value.id);
-    newBug.setReporter(this.newBugForm.get('reporter')?.value)
-    newBug.setStatus(this.newBugForm.get('status')?.value)
-    // POST new Bug via the BugService
-    this.bugService.postBug(newBug).subscribe({
+    // Set the 'id' of the 'priority' as its value in the form
+    this.newBugForm.controls['priority'].setValue(this.newBugForm.get('priority')?.value.id);
+    this.bugService.postBug(this.newBugForm.value).subscribe({
       error: err => console.log(err),
       complete: () => {
         console.log('New bug successfully posted!');

@@ -4,11 +4,11 @@
 <!-- Table of all available bugs in the "database", with clickable headers for sorting purposes -->
 <table>
   <tr>
-    <th (click)="sortByTitle()">Title</th>
-    <th (click)="sortByPriority()">Priority</th>
-    <th (click)="sortByReporter()">Reporter</th>
-    <th (click)="sortByDateCreated()">Date Created</th>
-    <th (click)="sortByStatus()">Status</th>
+    <th (click)="sortBy('title')">Title</th>
+    <th (click)="sortBy('priority')">Priority</th>
+    <th (click)="sortBy('reporter')">Reporter</th>
+    <th (click)="sortBy('created')">Date Created</th>
+    <th (click)="sortBy('status')">Status</th>
   </tr>
   <ng-container *ngFor="let bug of bugs">
     <tr>

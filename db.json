@@ -41,74 +41,31 @@
       "comments": []
     },
     {
-      "id": "TzNdM9B",
-      "title": "bug test new",
-      "description": "this is new bug test",
+      "title": "bug_Critical_PO",
+      "description": "This bug has Critical priority, PO reporter and no status.",
       "priority": 2,
+      "reporter": "PO",
+      "status": "",
+      "created": "2023-11-13T17:32:34.590Z",
+      "id": "dcibNjX"
+    },
+    {
+      "title": "bug_Minor_DEV",
+      "description": "This bug has Minor priority, DEV reporter and no status.",
+      "priority": 0,
       "reporter": "DEV",
       "status": "",
-      "created": "2023-11-12T23:24:08.850Z",
-      "comments": []
+      "created": "2023-11-13T17:33:21.462Z",
+      "id": "mHNlJ47"
     },
     {
-      "id": "Xn8GwQB",
-      "title": "hello world",
-      "description": "hello",
-      "priority": 0,
-      "reporter": "QA",
-      "status": "Done",
-      "created": "2023-11-12T23:24:26.074Z",
-      "comments": []
-    },
-    {
-      "id": "KzgM8Gr",
-      "title": "Title new",
-      "description": "This is new title",
+      "title": "bug_Major_QA_Rejected",
+      "description": "This bug has Major priority, QA reporter and Rejected status.",
       "priority": 1,
-      "reporter": "PO",
-      "status": "",
-      "created": "2023-11-12T23:28:54.469Z",
-      "comments": []
-    },
-    {
-      "id": "tDPBNSX",
-      "title": "kalispera",
-      "description": "kalinxiu",
-      "priority": 0,
-      "reporter": "PO",
-      "status": "",
-      "created": "2023-11-12T23:41:18.584Z",
-      "comments": []
-    },
-    {
-      "id": "_nUt_kc",
-      "title": "kaslioe",
-      "description": "jsdsgdsg",
-      "priority": 0,
-      "reporter": "DEV",
-      "status": "Done",
-      "created": "2023-11-12T23:43:53.153Z",
-      "comments": []
-    },
-    {
-      "id": "9h4nHq6",
-      "title": "ggg",
-      "description": "ggg",
-      "priority": 0,
       "reporter": "QA",
-      "status": "For Review",
-      "created": "2023-11-12T23:44:17.335Z",
-      "comments": []
-    },
-    {
-      "id": "T4D3Kcf",
-      "title": "Kalimera",
-      "description": "This is a description",
-      "priority": 1,
-      "reporter": "PO",
       "status": "Rejected",
-      "created": "2023-11-12T23:49:25.145Z",
-      "comments": []
+      "created": "2023-11-13T17:34:17.829Z",
+      "id": "VW3wZV4"
     }
   ]
 }

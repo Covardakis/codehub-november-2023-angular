@@ -18,30 +18,11 @@ export class BugComponent {
   priority: number = 0;
   reporter: string = '';
   status: string = '';
-  created: Date = new Date();
+  created?: Date;
   comments: Array<Comment> = [];
 
   constructor() { }
 
-  // Setter methods
-  setTitle(title: string): void {
-    this.title = title;
-  }
-
-  setDescription(description: string): void {
-    this.description = description;
-  }
-
-  setPriority(priority: number): void {
-    this.priority = priority;
-  }
-
-  setReporter(reporter: string): void {
-    this.reporter = reporter;
-  }
-
-  setStatus(status: string): void {
-    this.status = status;
-  }
+  
 
 }
